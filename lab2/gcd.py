@@ -11,3 +11,8 @@ def gcd(num1, num2):
     return gcd(num1, num2-num1)
 
 
+if __name__ == '__main__':
+    print("Testing Functions...")
+    print("Values: 108, 45")
+    print("Expected Result: {0}".format(9))
+    print "gcd result: {0}".format(gcd(108, 45))
