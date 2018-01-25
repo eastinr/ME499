@@ -5,6 +5,7 @@ from sensor import *
 from null_filter import *
 import matplotlib.pyplot as plt
 
+
 def mean_filter(data):
     filtered = []
 
