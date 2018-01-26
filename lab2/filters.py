@@ -16,16 +16,16 @@ def mean_filter(data, num=3):
 def median_filter(data, num=3):
     filtered = []
     for datum in range(len(data)-2):
-        median = n.median(data[datum:datum+2])
+        median = n.median(data[datum:datum+num-1])
         filtered.append(median)
     return filtered
 
 
 if __name__ == '__main__':
-    data = n.array(generate_sensor_data())
+    data = generate_sensor_data()
 
     mean_filtered_data = mean_filter(data, 5)
-    median_filtered_data = median_filter(data, 200)
+    median_filtered_data = median_filter(data, 50)
 
     x1 = range(len(mean_filtered_data))
     x2 = range(len(median_filtered_data))
