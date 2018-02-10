@@ -18,8 +18,8 @@ def take_arg():
         words_only_in_2 = set2.difference(set1)
         words_in_both = set1.intersection(set2)
 
-        print "Only in {0}: {1}".format(sys.argv[1], len(words_only_in_1))
-        print "Only in {0}: {1}".format(sys.argv[2], len(words_only_in_2))
+        print "Only {0}: {1}".format(sys.argv[1], len(words_only_in_1))
+        print "Only {0}: {1}".format(sys.argv[2], len(words_only_in_2))
         print "Both files: {0}".format(len(words_in_both))
 
 
@@ -31,9 +31,9 @@ def get_text(filename):
 
     word_set = set(text)
 
-    print "Words in {0}".format(filename)
-    print "\tTotal Words: {0}".format(len(text))
-    print "\tUnique words: {0}".format(len(word_set))
+    print "{0}:".format(filename)
+    print "\t{0} words".format(len(text))
+    print "\tUnique: {0}".format(len(word_set))
 
     return word_set
 
