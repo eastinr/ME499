@@ -2,7 +2,6 @@
 
 from math import pi
 import unittest
-import pytest
 
 
 class Circle:
