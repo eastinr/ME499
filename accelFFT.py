@@ -33,6 +33,7 @@ plt.subplot(221)
 plt.plot(x, y)
 plt.xlim([0,20])
 
+
 plt.subplot(222)
 plt.plot(x2,y2)
 plt.xlim([0,20])
