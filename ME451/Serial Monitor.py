@@ -55,7 +55,7 @@ class SerialThread(threading.Thread):
         return np.std(list(self.deque))
 
     def run(self):
-        s = serial.Serial('COM4', 9600, timeout=0, writeTimeout=0)
+        s = serial.Serial('/dev/ttyACM0', 9600, timeout=0, writeTimeout=0)
         while True:
             if s.inWaiting():
                 text = s.readline(s.inWaiting())
