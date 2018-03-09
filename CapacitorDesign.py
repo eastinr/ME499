@@ -95,14 +95,14 @@ def findCapacitor(target, max_number, caplist):
         cap.getcombo()
         dataset |= set(cap.stringlist)
     datalist = list(dataset)
-    datalist.sort(key=lambda data: abs(target - data[1]))
+    datalist.sort(key=lambda data: -abs(target - data[1]))
     for datum in datalist:
         print "{0:.3f} = {1}".format(datum[1], datum[0])
 
 
 if __name__ == '__main__':
-    cap_list = [1, 2, 3, 4]
-    target = 0.45
+    cap_list = [1, 10000, 10, 330, 100000, 1000, 3300, 2200]
+    target = 26.53
     findCapacitor(target, 4, cap_list)
 
     #for index, func in enumerate(cap.funclist):

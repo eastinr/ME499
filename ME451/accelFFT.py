@@ -1,14 +1,17 @@
 #!/usr/bin/env python
 
 import Queue
+import threading
 import numpy as np
 import matplotlib.pyplot as plt
-from readArduino import readArduino
+from readArduino import readArduino, saveFile
 
 filename = "piddelay5000.csv"
 #filename = '/home/robert/PycharmProjects/ME499/motor.csv'
 queue = Queue.Queue()
-readArduino(queue, filename, 9600, 10)
+readArduino(queue, 9600)
+saveFile(queue, filename, 10)
+
 
 my_data = np.genfromtxt(filename, delimiter=',')
 
